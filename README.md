@@ -1,4 +1,4 @@
 # TP-de-java
 
-TP 12 : Révisions
-_ Exercice 1 : Hôtels et appartements
+TP 12 : Révisions 
+( Exercice 1 : Hôtels et appartements )
