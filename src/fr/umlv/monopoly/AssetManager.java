@@ -40,33 +40,3 @@ public class AssetManager
 	}
 	
 }
-
-// brouillon : version double list hotel/apartment
-//List<Hotel> hotels = new ArrayList<Hotel>();
-//List<Apartment> apartments = new ArrayList<Apartment>();
-	/*
-	public void add (Hotel hotel)
-	{
-		hotels.add(hotel);
-	}
-	
-	public void add (Apartment apartment)
-	{
-		apartments.add(apartment);
-	}
-	*/
-		/*
-		double profit = 0;
-		for (Hotel hotel : hotels)
-		{
-			profit += hotel.profitPerNight();
-		}
-		for (Apartment apartment : apartments)
-		{
-			profit += apartment.profitPerNight();
-		}
-		for (Asset asset : assets)
-		{
-			profit += asset.profitPerNight();
-		}
-		*/
