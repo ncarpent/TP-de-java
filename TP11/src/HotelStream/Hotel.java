@@ -20,7 +20,7 @@ public class Hotel
 		Objects.requireNonNull(roomlist);
 		this.name = name;
 		rooms = List.copyOf(roomlist);
-	} // Hotel pourraît aussi être un record à priori...
+	} // Hotel pourraÃ®t aussi Ãªtre un record...
 	
 	public String toString ()
 	{
@@ -83,12 +83,12 @@ public class Hotel
 /*
  * Exercice 2 :
  * 
- * Q6/ L'implémentation de roomForPrice est meilleure dans la deuxième version.
- * 		En effet, sorted est appliqué avant le filtre (donc à plus d'éléments) dans la première
+ * Q6/ L'implÃ©mentation de roomForPrice est meilleure dans la deuxiÃ¨me version.
+ * 		En effet, sorted est appliquÃ© avant le filtre (donc Ã  plus d'Ã©lÃ©ments) dans la premiÃ¨re
  * 		version.
  * 		De plus, le calcul du max est moins complexe que l'algorithme de tri.
  * 		
  * 
- * Q8/ Le type de retour de la méthode roomInfoGroupedByFloor est Map<Integer, List<Room>>.
+ * Q8/ Le type de retour de la mÃ©thode roomInfoGroupedByFloor est Map<Integer, List<Room>>.
  * 
  */
