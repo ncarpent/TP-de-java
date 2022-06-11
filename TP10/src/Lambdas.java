@@ -14,7 +14,7 @@ public class Lambdas
 		liste.replaceAll(s -> s.toUpperCase(Locale.ROOT));
 	}
 	
-	/* version limitée aux String
+	/* version limitÃ©e aux String
 	public static Map<String, Integer> occurences (List<String> liste)
 	{
 		var dico = new HashMap<String, Integer>();
@@ -77,26 +77,26 @@ public class Lambdas
 		
 		// Exercice 3
 		System.out.println("Exercice 3 :");
-		System.out.println("_ méthode actorGroupByFirstName :");
+		System.out.println("_ mÃ©thode actorGroupByFirstName :");
 		List<Actor> actors = List.of(new Actor("bob", "de niro"), new Actor("willy", "cat"), 
 				new Actor("bob", "cat"));
 		System.out.println("liste d'acteurs : " + actors);
 		var dicoActor = Lambdas.actorGroupByFirstName(actors);
-		System.out.println("dico d'acteurs groupés : " + dicoActor);
+		System.out.println("dico d'acteurs groupÃ©s : " + dicoActor);
 		System.out.println();
 		
-		System.out.println("_ méthode actorGroupBy :");
-		var group1 = actorGroupBy(actors, Actor::firstName);  // groupe par prénom
+		System.out.println("_ mÃ©thode actorGroupBy :");
+		var group1 = actorGroupBy(actors, Actor::firstName);  // groupe par prÃ©nom
 		var group2 = actorGroupBy(actors, Actor::lastName);   // groupe par nom
-		System.out.println("dico d'acteurs groupés par prénom : " + group1);
-		System.out.println("dico d'acteurs groupés par nom : " + group2);
+		System.out.println("dico d'acteurs groupÃ©s par prÃ©nom : " + group1);
+		System.out.println("dico d'acteurs groupÃ©s par nom : " + group2);
 		System.out.println();
 		
-		System.out.println("_ méthode groupBy :");
+		System.out.println("_ mÃ©thode groupBy :");
 		var listint = List.of(42, 5, 666, 37, -65, 2, -26, -255, 256, -9, -72);
-		System.out.println("liste d'entiers signés :" + listint);
+		System.out.println("liste d'entiers signÃ©s :" + listint);
 		var dicoint = Lambdas.groupBy(listint, i->i>=0);
-		System.out.println("dico d'entiers signés groupés par positivités :" + dicoint);
+		System.out.println("dico d'entiers signÃ©s groupÃ©s par positivitÃ©s :" + dicoint);
 		System.out.println();
 	}
 	
@@ -104,57 +104,55 @@ public class Lambdas
 
 /* Exercice 1 :
  * 
- * Q1/ Pour mettre une chaîne en majuscules (indépendament de la langue dans laquelle l'OS est
- * 		configuré), on utilise la méthode toUpperCase(Locale.ROOT()).
+ * Q1/ Pour mettre une chaÃ®ne en majuscules (indÃ©pendament de la langue dans laquelle l'OS est
+ * 		configurÃ©), on utilise la mÃ©thode toUpperCase(Locale.ROOT()).
  * 
- * Q2/ L'interface fonctionnelle utilisée par la méthode list.replaceAll est unaryOperator.
+ * Q2/ L'interface fonctionnelle utilisÃ©e par la mÃ©thode list.replaceAll est UnaryOperator.
  * 
- * Q3/ Cela correspond au type de fonction (T)->T (c'est un opérateur unaire...).
+ * Q3/ Cela correspond au type de fonction (T)->T (c'est un opÃ©rateur unaire...).
  * 
- * Q4/ La méthode replaceAll étant appelée sur une liste de String, le paramètre de la lambda est de
+ * Q4/ La mÃ©thode replaceAll Ã©tant appelÃ©e sur une liste de String, le paramÃ¨tre de la lambda est de
  * 		type String et son type de retour est aussi String.
  * 
  * 
  * Exercice 2 :
  * 
- * Q1/ Le paramètre de la méthode occurences est de type List<String>.
- * 		La valeur de retour de la méthode occurences est de type Map<Sring,int> // Integer ?
+ * Q1/ Le paramÃ¨tre de la mÃ©thode occurences est de type List<String>.
+ * 		La valeur de retour de la mÃ©thode occurences est de type Map<Sring,Integer>
  * 
- * Q2/ Ici, on pourra choisir une HashMap comme implantation de la valeur de retour. L'ordre n'a à
- * 		priori pas d'intérêt.
+ * Q2/ Ici, on pourra choisir une HashMap comme implantation de la valeur de retour. L'ordre n'a Ã 
+ * 		priori pas d'intÃ©rÃªt.
  * 
- * Q3/ La méthode foreach prend un Consumer en paramètre. Cela correspond à un type fonction
+ * Q3/ La mÃ©thode foreach prend un Consumer en paramÃ¨tre. Cela correspond Ã  un type fonction
  * 		(T)->void. Ici, les types de la lambda correspondant sont (String)->void.
  * 
- * Q4/ La méthode merge prend une Bifunction en paramètre. Le type fonction correspondant est
+ * Q4/ La mÃ©thode merge prend une Bifunction en paramÃ¨tre. Le type fonction correspondant est
  * 		(T,U)->V. Ici, les types de la lambda correspondants que l'on va utiliser sont
  * 		(Integer, Integer)->Integer.
  * 
  * Exercice 3 :
  * 
- * Q1/ Le paramètre de actorGroupByFirstName est de type List<Actor>.
+ * Q1/ Le paramÃ¨tre de actorGroupByFirstName est de type List<Actor>.
  * 		La valeur de retour de actorGroupByFirstName est de type Map<String, List<Actor>>.
  * 
- * Q2/ La méthode Map.computeIfAbsent ajoute une valeur à la Map si la clé associée n'est pas encore
- * 		présente (ne fais rien sinon). Elle utilise une Interface fonctionnelle (lambda) pour
- * 		calculer la nouvelle valeur. Dans tous les cas, elle renvoie la valeur associée à la clé
- * 		(qu'elle soit préexistante ou nouvellement calculée par la lambda).
- * 		Son second paramètre est une interface fonctionnelle de type Function. Cela correspond au
- * 		type fonctionnel (T)->U. Ici, T doit être un sur-type du type des clés. Et U doit être un
- * 		type dérivé du type des valeurs.
- * 		Le premier paramètre est la clé dont on doit tester la présence. En cas d'abscence de
- * 		celle-ci, le second paramètre est une lambda qui calcule une valeur à partir de la clé donnée
- * 		en premier paramètre. Le couple (clé, valeur) obtenu est alors ajouté à la Map (à moins que
+ * Q2/ La mÃ©thode Map.computeIfAbsent ajoute une valeur Ã  la Map si la clÃ© associÃ©e n'est pas encore
+ * 		prÃ©sente (ne fais rien sinon). Elle utilise une Interface fonctionnelle (lambda) pour
+ * 		calculer la nouvelle valeur. Dans tous les cas, elle renvoie la valeur associÃ©e Ã  la clÃ©
+ * 		(qu'elle soit prÃ©existante ou nouvellement calculÃ©e par la lambda).
+ * 		Son second paramÃ¨tre est une interface fonctionnelle de type Function. Cela correspond au
+ * 		type fonctionnel (T)->U. Ici, T doit Ãªtre un sur-type du type des clÃ©s. Et U doit Ãªtre un
+ * 		type dÃ©rivÃ© du type des valeurs.
+ * 		Le premier paramÃ¨tre est la clÃ© dont on doit tester la prÃ©sence. En cas d'abscence de
+ * 		celle-ci, le second paramÃ¨tre est une lambda qui calcule une valeur Ã  partir de la clÃ© donnÃ©e
+ * 		en premier paramÃ¨tre. Le couple (clÃ©, valeur) obtenu est alors ajoutÃ© Ã  la Map (Ã  moins que
  * 		la valeur ne soit null).
- * 		Dans notre cas, le premier paramètre sera le prénom des acteurs (clés) et le deuxième sera
- * 		une lambda qui à un prénom associe (et renvoie) la liste des acteurs portant ce prénom.
+ * 		Dans notre cas, le premier paramÃ¨tre sera le prÃ©nom des acteurs (clÃ©s) et le deuxiÃ¨me sera
+ * 		une lambda qui Ã  un prÃ©nom associe (et renvoie) la liste des acteurs portant ce prÃ©nom.
  * 
- * Q3/ Dans notre cas, la lambda passée en second paramètre doit être de type (String)->List<Actor>.
+ * Q3/ Dans notre cas, la lambda passÃ©e en second paramÃ¨tre doit Ãªtre de type (String)->List<Actor>.
  * 
- * Q4/ ok normalement (à tester)
- * 
- * Q5/ Le type fonction du second paramètre doit être (T)->U. Et ici plus précisément
+ * Q5/ Le type fonction du second paramÃ¨tre doit Ãªtre (T)->U. Et ici plus prÃ©cisÃ©ment
  * 		(Actor)->String.
  * 		L'interface fonctionnelle correspondante est Function<T, U>.
- * 		Le type du second paramètre de actorGroupBy doit être Function<Actor, String>.
+ * 		Le type du second paramÃ¨tre de actorGroupBy doit Ãªtre Function<Actor, String>.
  */
