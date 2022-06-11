@@ -1,7 +1,5 @@
 package fr.umlv.data.main;
 
-//import java.util.List;
-
 import fr.umlv.data.LinkedLink;
 
 public class Main
