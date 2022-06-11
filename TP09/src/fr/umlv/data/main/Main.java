@@ -44,61 +44,31 @@ public class Main
 		System.out.println("test de contenance de " + testdbl + " : " + liste.contains(testdbl));
 		System.out.println("test de contenance de " + testintin + " : " + liste.contains(testintin));
 		System.out.println("test de contenance de " + testdblin + " : " + liste.contains(testdblin));
-		/*System.out.println("test : ");
-		String s = "bonjour";
-		List<String> l = List.of("bonjour");
-		System.out.println("contient ? : " + l.contains(0));*/
 	}
 	
-	/*
-	public static void main(String[] args)
-	{
-		// Exo 1 : Question 1 / Question 3
-		LinkedLink liste = new LinkedLink();
-		System.out.println(liste);
-		liste.add(144);
-		System.out.println(liste);
-		liste.add(13);
-		System.out.println(liste);
-		liste.add(42);
-		System.out.println(liste);
-		
-		// Exo 2 : Question 1
-		System.out.println(liste.get(0));
-		System.out.println(liste.get(1));
-		System.out.println(liste.get(2));
-		
-		// Question 3
-		LinkedLink listech = new LinkedLink();
-		listech.add(" !");
-		listech.add("word");
-		listech.add("hello ");
-		System.out.println(listech);
-		int lg = ((String) listech.get(1)).length(); //cast en str + lg
-		System.out.println("longueur du 2e item : " + lg);
-	}
-	*/
 	
-	/* exo 2 : 
+	
+	/* 
+	 * exo 2 : 
 	 * 
 	 * Q1/ Si l'indice est invalide, il faut lever une exception.
 	 * 
-	 * Q4/ On est obligé d'utiliser un cast ici car la méthode get renvoie un objet de type
-	 * 		Object. Il faut donc caster l'objet désigné dans le type voulu (ici String) pour
+	 * Q4/ On est obligÃ© d'utiliser un cast ici car la mÃ©thode get renvoie un objet de type
+	 * 		Object. Il faut donc caster l'objet dÃ©signÃ© dans le type voulu (ici String) pour
 	 * 		pouvoir travailler dessus ensuite.
-	 * 		En tant que développeur Java, on n'aime pas les casts car si l'on n'entre pas un
-	 * 		type de données correct, on risque de lever une exception. Or on ne maitrise pas
-	 * 		forcément l'utilisation qui sera faite de notre programme.
+	 * 		En tant que dÃ©veloppeur Java, on n'aime pas les casts car si l'on n'entre pas un
+	 * 		type de donnÃ©es correct, on risque de lever une exception. Or on ne maitrise pas
+	 * 		forcÃ©ment l'utilisation qui sera faite de notre programme.
 	 * 
 	 * exo 3 : 
 	 * 
-	 * Q1/ L'intérêt d'utiliser un type paramétré ici est de trouver une alternative au cast
-	 * 		nécessaire dans l'exercice précédent.
+	 * Q1/ L'intÃ©rÃªt d'utiliser un type paramÃ©trÃ© ici est de trouver une alternative au cast
+	 * 		nÃ©cessaire dans l'exercice prÃ©cÃ©dent.
 	 * 
-	 * Q4/ o doit être de type Object car on peut demander théoriquement à tester n'importe
-	 * 		quel objet. Notamment si l'on ne connaît pas le type de la liste, il faut s'attendre
-	 * 		à devoir tester d'autres objets. De plus, cela s'avérerait compliqué de fixer le type
-	 * 		à T du point de vue de l'héritage.
+	 * Q4/ o doit Ãªtre de type Object car on peut demander thÃ©oriquement Ã  tester n'importe
+	 * 		quel objet. Notamment si l'on ne connaÃ®t pas le type de la liste, il faut s'attendre
+	 * 		Ã  devoir tester d'autres objets. De plus, cela s'avÃ©rerait compliquÃ© de fixer le type
+	 * 		Ã  T du point de vue de l'hÃ©ritage.
 	 * 		
 	 */
 	
