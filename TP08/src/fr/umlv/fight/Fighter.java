@@ -20,19 +20,6 @@ public class Fighter extends Robot
 		return "Fighter " + this.name();
 	}
 	
-	/* 
-	public void fire (Robot target)
-	{
-		
-		
-		if (touch)
-		{
-			target.hp(target.hp()-2);
-			System.out.println(target + " a été touché par le " + this + " !");
-		}
-	}
-	*/
-	
 	@Override
 	protected boolean rollDice ()
 	{
@@ -43,23 +30,23 @@ public class Fighter extends Robot
 	
 }
 
-/* Q1 : un générateur pseudo-aléatoire utilise un algorithme complexe à partir d'un nombre appelé
- * 		"graine" pour en générer un autre de manière imprévisible.
+/* Q1 : un gÃ©nÃ©rateur pseudo-alÃ©atoire utilise un algorithme complexe Ã  partir d'un nombre appelÃ©
+ * 		"graine" pour en gÃ©nÃ©rer un autre de maniÃ¨re imprÃ©visible.
  * 
- * Q3 : si un champ est déclaré avec une visibilité "public", n'impore qui peut le modifier à sa
- * 		guise. Avec une visibilité "protected", n'importe qui peut le modifier en créant une
- * 		sous-classe. Avec une visibilité "private", seule la classe courante peut le modifier
- * 		sans avoir recours à un accesseur. Avec une visibilité "package", seules les classes du
+ * Q3 : si un champ est dÃ©clarÃ© avec une visibilitÃ© "public", n'impore qui peut le modifier Ã  sa
+ * 		guise. Avec une visibilitÃ© "protected", n'importe qui peut le modifier en crÃ©ant une
+ * 		sous-classe. Avec une visibilitÃ© "private", seule la classe courante peut le modifier
+ * 		sans avoir recours Ã  un accesseur. Avec une visibilitÃ© "package", les classes du
  * 		package peuvent le modifier.
- * 		Par exemple ici, un objet extérieur (pour une visibilité public) ou un Fighter (pour une
- * 		visibilité protected) pourrais modifier les pv de notre Robot et les remettre à 10 comme
+ * 		Par exemple ici, un objet extÃ©rieur (pour une visibilitÃ© public) ou un Fighter (pour une
+ * 		visibilitÃ© protected) pourrais modifier les pv de notre Robot et les remettre Ã  10 comme
  * 		bon lui semble...
  * 
  * Q5 : le copier-coller reproduit aussi les erreurs de code.
  * 
- * Q9 : le sous-typage, c'est la réutilisation de méthodes et de champs dans un nouveau type sans
- * 		avoir à les redéfinir (par exemple name et hp).
- * 		le polymorphisme, c'est avoir différents comportements pour une méthode en fonction des
- * 		types effectifs des objets manipulés (par exemple fire() et rollDice()).
+ * Q9 : le sous-typage, c'est la rÃ©utilisation de mÃ©thodes et de champs dans un nouveau type sans
+ * 		avoir Ã  les redÃ©finir (par exemple name et hp).
+ * 		le polymorphisme, c'est avoir diffÃ©rents comportements pour une mÃ©thode en fonction des
+ * 		types effectifs des objets manipulÃ©s (par exemple fire() et rollDice()).
  */
 
