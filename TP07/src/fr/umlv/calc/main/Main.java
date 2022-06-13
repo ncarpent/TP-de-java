@@ -5,10 +5,6 @@ import java.util.Scanner;
 import fr.umlv.calc.Expr;
 import fr.umlv.calc.Expr.*;
 
-//import fr.umlv.calc.Expr.Add;
-//import fr.umlv.calc.Expr.Mul;
-//import fr.umlv.calc.Expr.Sub;
-//import fr.umlv.calc.Expr.Value;
 
 public class Main
 {
@@ -24,8 +20,8 @@ public class Main
 		
 		// Question 2
 		System.out.println("Question 2 :");
-		System.out.println("résultat 1 : " + expression.eval());
-		System.out.println("résultat 2 : " + expression2.eval());
+		System.out.println("rÃ©sultat 1 : " + expression.eval());
+		System.out.println("rÃ©sultat 2 : " + expression2.eval());
 		System.out.println();
 		
 		// Question 3
@@ -33,7 +29,7 @@ public class Main
 		Scanner sc = new Scanner("- + 2 3 4");
 		Expr expression3 = Expr.parse(sc);
 		System.out.println("expression 3 : " + expression3);
-		System.out.println("résultat 3 : " + expression3.eval());
+		System.out.println("rÃ©sultat 3 : " + expression3.eval());
 		System.out.println();
 		
 		// Question 7
@@ -41,17 +37,8 @@ public class Main
 		List<String> liste = List.of("-", "+", "2", "3", "4");
 		Expr expression4 = Expr.parse(liste.iterator()); //Ne prends pas une list !!!
 		System.out.println("expression 4 : " + expression4);
-		System.out.println("résultat 4 : " + expression4.eval());
-		
-		//System.out.println(Integer.parseInt("007"));
-		//System.out.println(Integer.parseInt("+"));
-		//String v = String.valueOf(5);
-		//Scanner sc = new Scanner((Readable) liste); est-ce possible ???
-		
+		System.out.println("rÃ©sultat 4 : " + expression4.eval());		
+		System.out.println();
 		
 	}
 }
-
-/* 
- * 
- */
