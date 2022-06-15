@@ -5,7 +5,7 @@ public record Cat(String name, double biscuits) implements Animal {
 	public Cat {
 		Objects.requireNonNull(name);
 		if (biscuits < 0) {
-			throw new IllegalArgumentException("Quantité de croquettes négative.");
+			throw new IllegalArgumentException("QuantitÃ© de croquettes nÃ©gative.");
 		}
 	}
 	
@@ -14,11 +14,5 @@ public record Cat(String name, double biscuits) implements Animal {
 		return "Cat : " + name + " (" + biscuits + ")";
 	}
 	
-	/*
-	public static void main (String[] args) {
-		var gar = new Cat("garfield", 120);
-		System.out.println(gar);
-	}
-	*/
 	
 }
