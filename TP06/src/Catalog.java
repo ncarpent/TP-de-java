@@ -146,7 +146,7 @@ public class Catalog
  * Exercice 1 :
  * Q2/ 	_ Il faut créer une interface commune à VideoTape et LaserDisc (ici Article). La méthode add
  * 		prend alors un Article en paramètre et la méthode lookup renvoie un Article.
- * 		_ S'il n'y a ni cassette, ni disc qui a le nom demandé, lookup doit renvoyé null.
+ * 		_ S'il n'y a ni cassette, ni disc qui a le nom demandé, lookup doit renvoyer null.
  * 
  * Q3/ La méthode toText s'applique sur un Article. On peut donc la créer comme une méthode
  * 		d'instance de cet Article.
