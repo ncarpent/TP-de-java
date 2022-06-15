@@ -36,7 +36,6 @@ public class Shelter {
 		StringBuilder retour = new StringBuilder("Refuge : \n");
 		for (var anim : shelt) {
 			retour.append("| ").append(anim.toString()).append(king != null && king.equals(anim) ? " : King" : "").append("\n");
-			//retour.append(dog.name()).append(" : ").append(dog.weight()).append("\n");
 		}
 		return retour.append("|__\n").toString();
 	}
@@ -53,10 +52,9 @@ public class Shelter {
 	
 	
 	public static void afficher (ArrayList<Animal> liste) {
-		System.out.println("chiens renvoyés : ");
+		System.out.println("chiens renvoyÃ©s : ");
 		for (var anim : liste) {
 			System.out.println(anim.toString() + " ; ");
-			//System.out.println(element.name() + " : " + element.weight() + " ; ");
 		}
 		System.out.println();
 	}
@@ -66,7 +64,7 @@ public class Shelter {
 /*
  * Exercice 2 :
  * 
- * Q3/ Le champ shelt de Dog peut désormais varier au cours du temps. Il faut donc changer le Record
- * 		en Class. C'est un gros changement car cela implique de devoir réimplémenter les méthodes
+ * Q3/ Le champ shelt de Dog peut dÃ©sormais varier au cours du temps. Il faut donc changer le Record
+ * 		en Class. C'est un gros changement car cela implique de devoir rÃ©implÃ©menter les mÃ©thodes
  * 		equals et hashCode.
  */
