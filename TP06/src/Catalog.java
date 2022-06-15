@@ -2,7 +2,6 @@ import java.util.HashMap;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-//import java.util.ArrayList;
 import java.nio.file.Path;
 import java.time.Duration;
 import java.io.DataInputStream;
@@ -24,12 +23,12 @@ public class Catalog
 	{
 		if (lookup(m.name()) != null)
 		{
-			throw new IllegalArgumentException("L'article est déjà présent.");
+			throw new IllegalArgumentException("L'article est dÃ©jÃ  prÃ©sent.");
 		}
 		catalog.put(m.name(), m);
 	}
 	
-	public Article lookup (String name) // renvoie null si pas trouvé !
+	public Article lookup (String name)
 	{
 		return catalog.get(name);
 	}
@@ -37,14 +36,6 @@ public class Catalog
 	public void save (Path p) throws IOException
 	{
 		save(p, StandardCharsets.UTF_8);
-		/*try (var writer = Files.newBufferedWriter(p))
-		{
-			for (var article : catalog.values())
-			{
-				writer.write(article.toText());
-				writer.newLine();
-			}
-		}*/
 	}
 	
 	public void save (Path p, Charset encoding) throws IOException
@@ -88,7 +79,7 @@ public class Catalog
 				}
 				default : 
 				{
-					throw new IllegalArgumentException("Support de film erroné");
+					throw new IllegalArgumentException("Support de film erronÃ©");
 				}
 				}
 			}
@@ -98,16 +89,6 @@ public class Catalog
 	public void load (Path p) throws IOException
 	{
 		load(p, StandardCharsets.UTF_8);
-		/*try (var reader = Files.newBufferedReader(p))
-		{
-			String ligne;
-			Article art;
-			while ((ligne = reader.readLine()) != null)
-			{
-				art = Article.fromText(ligne);
-				catalog.put(art.name(), art);
-			}
-		}*/
 	}
 	
 	public void load (Path p, Charset encoding) throws IOException
@@ -127,7 +108,7 @@ public class Catalog
 	public void loadInBinary (Path p) throws IOException
 	{
 		try ( var input = Files.newInputStream(p);
-			var data = new DataInputStream(input)) //catch ajoutable ???
+			var data = new DataInputStream(input))
 		{
 			int len = data.readInt();
 			int type;
@@ -163,23 +144,22 @@ public class Catalog
 
 /*
  * Exercice 1 :
- * Q2/ 	_ Il faut créer une interface commune à VideoTape et LaserDisc (ici Article). La méthode add
- * 		prend alors un Article en paramètre et la méthode lookup renvoie un Article.
- * 		_ S'il n'y a ni cassette, ni disc qui a le nom demandé, lookup doit renvoyé null.
- * 		???
+ * Q2/ 	_ Il faut crÃ©er une interface commune Ã  VideoTape et LaserDisc (ici Article). La mÃ©thode add
+ * 		prend alors un Article en paramÃ¨tre et la mÃ©thode lookup renvoie un Article.
+ * 		_ S'il n'y a ni cassette, ni disc qui a le nom demandÃ©, lookup doit renvoyÃ© null.
  * 
- * Q3/ La méthode toText s'applique sur un Article. On peut donc la créer comme une méthode
+ * Q3/ La mÃ©thode toText s'applique sur un Article. On peut donc la crÃ©er comme une mÃ©thode
  * 		d'instance de cet Article.
- * 		La méthode fromText s'applique sur une String (on ne peut donc pas la créer comme méthode
- * 		d'instance de String). On doit alors la créer comme méthode statique de Article.
- * 		La méthode fromText liste explicitement les différents cas possibles, il ne doit donc pas y
- * 		en avoir d'autres. L'interface doit être fermée.
+ * 		La mÃ©thode fromText s'applique sur une String (on ne peut donc pas la crÃ©er comme mÃ©thode
+ * 		d'instance de String). On doit alors la crÃ©er comme mÃ©thode statique de Article.
+ * 		La mÃ©thode fromText liste explicitement les diffÃ©rents cas possibles, il ne doit donc pas y
+ * 		en avoir d'autres. L'interface doit Ãªtre fermÃ©e.
  * 
- * Q4/ Pour créer un écrivain sur un fichier texte à partir d'un Path, on utilise la méthode
+ * Q4/ Pour crÃ©er un Ã©crivain sur un fichier texte Ã  partir d'un Path, on utilise la mÃ©thode
  * 		newBufferedWriter de la classe Files.
- * 		Pour garantir que la ressource système est bien libérée, il faut utiliser un try().
- * 		Pour gérer l'exception d'entrée/sortie, il ne faut pas oublier de mentionner la clause
+ * 		Pour garantir que la ressource systÃ¨me est bien libÃ©rÃ©e, il faut utiliser un try().
+ * 		Pour gÃ©rer l'exception d'entrÃ©e/sortie, il ne faut pas oublier de mentionner la clause
  * 		throws.
- * 		L'intérêt de définir la méthode load comme méthode d'instance est que l'on peut charger un
- * 		fichier de sauvegarde à la suite d'un catalogue qui n'est pas vide.
+ * 		L'intÃ©rÃªt de dÃ©finir la mÃ©thode load comme mÃ©thode d'instance est que l'on peut charger un
+ * 		fichier de sauvegarde Ã  la suite d'un catalogue qui n'est pas vide.
  */
