@@ -10,7 +10,7 @@ public class Dog implements Animal {
 	public Dog (String name, int weight) {
 		Objects.requireNonNull(name);
 		if (weight < 0) {
-			throw new IllegalArgumentException("Poid négatif");
+			throw new IllegalArgumentException("Poid nÃ©gatif");
 		}
 		this.name = name;
 		this.weight = weight;
@@ -47,7 +47,7 @@ public class Dog implements Animal {
 			shelt = shelter;
 		}
 		else {
-			throw new IllegalStateException (name + " est déjà affecté à un refuge.");
+			throw new IllegalStateException (name + " est dÃ©jÃ  affectÃ© Ã  un refuge.");
 		}
 	}
 	
@@ -69,13 +69,4 @@ public class Dog implements Animal {
 	
 	
 	
-	/*
-	public static void main (String[] args) {
-		var scooby = new Dog("scooby doo", 21);
-		System.out.println(scooby);
-		
-		var strange = new Dog(null, -10);
-		System.out.println(strange);
-	}
-	*/
 }
