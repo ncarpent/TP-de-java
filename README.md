@@ -10,3 +10,4 @@ TP 06 : Interface et Entrée/Sortie (Exercice 1 : Blockbuster ) //
 TP 05 : Interface et Collection ( Exercice 1 : Refuge - Exercice 2 : Arche de Noé ) //
 TP 04 : Objets, délégation, ArrayList, HashMap ( Exercice 1 : Eclipse - Exercice 2 : Library - Exercice 3 : Librarie 2 (le retour de la vengeance) ) //
 TP 03 : Egalité, nullabilité, mutabilité, affichage ( Exercice 1 : Livre - Exercice 2 : Liberté, Égalité, toString - Exercice 3 : Liberté, equals, Fraternité - Exercice 4 : Tri à caillou [à la maison] ) //
+TP 02 : String, StringBuilder, égalité, et expressions régulières ( Exercice 1 : Assignation, égalité, référence - Exercice 2 : En morse. Stop. - Exercice 3 : Reconnaissance de motifs ) //
