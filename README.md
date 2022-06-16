@@ -7,3 +7,4 @@ TP 09 : Paquetage, Structure de données, Relation d'implantation ( Exercice 1 :
 TP 08 : Héritage, Appel de constructeurs, Visibilité ( Exercice 1 : Redéfinition, liaison tardive (late binding) - Exercice 2 : Robot - Exercice 3 : Fighter ) //
 TP 07 : Interface, Polymorphisme, Liaison tardive ( Exercice 1 : Arbre d'expressions ) //
 TP 06 : Interface et Entrée/Sortie (Exercice 1 : Blockbuster ) //
+TP 05 : Interface et Collection ( Exercice 1 : Refuge - Exercice 2 : Arche de Noé ) //
