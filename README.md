@@ -13,3 +13,4 @@ TP 03 : Egalité, nullabilité, mutabilité, affichage ( Exercice 1 : Livre - Ex
 TP 02 : String, StringBuilder, égalité, et expressions régulières ( Exercice 1 : Assignation, égalité, référence - Exercice 2 : En morse. Stop. - Exercice 3 : Reconnaissance de motifs ) //
 TP 01 : Premiers pas en Java, chaînes de caractères, tableaux, boucles ( Exercice 1 : Hello Groland - Exercice 2 : Afficher les arguments de la ligne de commande - Exercice 3 : Calculette simple - Exercice 4 : Record et conversion de String en entier - Exercice 5 : De C vers Java ) //
 TP noté Java - 2021 ( Exercice 1 : Manifeste d'un porte conteneur ) //
+lien vers les énoncés des tp : https://monge.univ-mlv.fr/ens/Licence/L3/2021-2022/Java/index.php
